@@ -1,0 +1,22 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Confirmación de edad</h4>
+  <button (click)="close()" aria-label="Close" class="btn-close" type="button"></button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="mb-3">
+      <label for="dateOfBirth">Fecha de nacimiento</label>
+      <div class="input-group">
+        <input #dp="ngbDatepicker" [(ngModel)]="dateDefault" [maxDate]="MAX_DATE" [minDate]="MIN_DATE" [weekdays]="false"
+               class="form-control" id="dateOfBirth" name="dp" ngbDatepicker
+               outsideDays="hidden"
+               placeholder="yyyy-mm-dd">
+        <button (click)="dp.toggle()" class="btn btn-dark calendar" type="button"><i
+          class="bi bi-calendar-date"></i></button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button (click)="close()" class="btn btn-primary" type="button">Guardar</button>
+</div>

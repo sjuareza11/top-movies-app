@@ -1,0 +1,14 @@
+<div class="movie-card">
+  <div class="movie-card__wrapper">
+    <img [src]="movie.poster_path" loading="lazy" class="movie-card__picture" />
+  </div>
+  <div class="w-100 ps-3">
+    <app-circle-progress-bar
+      [percentage]="movie.vote_average * 10"
+    ></app-circle-progress-bar>
+    <h2 class="movie-card__title">{{ movie.title }}</h2>
+    <p class="movie-card__description">
+      {{ movie.release_date | date: "dd/MMM/yyyy" }}
+    </p>
+  </div>
+</div>

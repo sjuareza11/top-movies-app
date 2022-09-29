@@ -1,0 +1,9 @@
+<div class="progress blue">
+  <span class="progress-left">
+    <span [ngStyle]="{'transform': 'rotate(' + progressLeft + 'deg)'}" class="progress-bar"></span>
+  </span>
+  <span class="progress-right">
+    <span [ngStyle]="{'transform': 'rotate(' + progressRight + 'deg)'}" class="progress-bar"></span>
+  </span>
+  <div class="progress-value">{{percentage}}&percnt;</div>
+</div>

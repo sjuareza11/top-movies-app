@@ -1,0 +1,42 @@
+@import "../../../custom.scss";
+
+.certification-container {
+  height: 350px;
+  margin-top: 37%;
+
+  .badge {
+    cursor: pointer;
+    min-width: 42px;
+    border: 1px solid lightgray !important;
+
+    &--disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .accordion-button {
+    color: var(--bs-light);
+    background-color: var(--bs-dark);
+
+    &:not(.collapsed) {
+      color: var(--bs-light);
+      background-color: var(--bs-dark);
+
+      &::after {
+        color: var(--bs-dark);
+        background-image: var(--bs-accordion-btn-icon);
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .accordion-item {
+    min-width: 360px;
+  }
+}
+
+@include media-breakpoint-up("xl") {
+  .certification-container {
+    margin-top: 46%;
+  }
+}

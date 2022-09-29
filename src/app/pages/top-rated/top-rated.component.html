@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="d-flex flex-wrap">
+  <app-certifications (saveFilter)="onSaveFilter($event)" class="d-block ms-3 ms-md-4"></app-certifications>
+  <div (scrolled)="onScroll()" [infiniteScrollDistance]="2" class="container movies-scroll-container" infiniteScroll>
+    <div class="row w-100">
+      <app-movie-card *ngFor="let movie of movies;" [movie]="movie"
+        class="col-xl-3 col-sm-4 d-flex justify-content-center">
+      </app-movie-card>
+    </div>
+  </div>
+</div>
